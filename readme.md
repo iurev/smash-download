@@ -8,10 +8,9 @@ _VZHUCKH, and you have amazing wallappers_
 
 ```
 # in the project's folder
-bin/download # Current month
-bin/download 2007 # Download photos from 2007
-bin/download 2018 1 # Download for January of 2018
-bin/download 320x480 no-calendar # Current month with size 320x480 and without calendar
+python main.py # Download photos of the current month
+python main.py 2018 1 # Download photos of January of 2018
+python main.py 320x480 no-calendar # Current month with size 320x480 and without calendar
 ```
 
 Parameters year month size calendar:
@@ -21,3 +20,21 @@ month – one/two digits, default – current month
 size – like 320x480, default – 2560x1440
 no-calendar
 ```
+
+## Installation
+
+```
+git clone https://github.com/wwju/smash-download.git
+cd smash-download
+pip install -r requirements.txt
+```
+
+## Testing
+
+```
+pytest test.py
+```
+
+## License
+
+MIT
