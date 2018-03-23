@@ -4,6 +4,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 import mimetypes
+import os
 
 now = datetime.datetime.now()
 
@@ -98,6 +99,7 @@ def save_image(url, year, month, index):
         month=month,
         ext=ext
     )
+    os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'wb') as handler:
         handler.write(data)
 
