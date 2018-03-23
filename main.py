@@ -93,7 +93,7 @@ def save_image(url, year, month, index):
     content_type = res.headers['content-type']
     ext = mimetypes.guess_extension(content_type)
     data = res.content
-    path = './output/{year}-{month:02d}-{index}.{ext}'.format(
+    path = './output/{year}-{month:02d}-{index}{ext}'.format(
         index=index,
         year=year,
         month=month,
